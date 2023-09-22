@@ -39,7 +39,7 @@ When you run the application the database will be automatically created (if nece
 
 ### Database Migrations
 
-Pelase run query on , file :
+Pelase run query on , file Database MovieDb.Txt :
 
 ### TestBackendOnPostman
 
