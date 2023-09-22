@@ -1,0 +1,225 @@
+{
+	"info": {
+		"_postman_id": "3e30e577-82b7-4414-a6d1-7f19bc877c6a",
+		"name": "Movie_Api",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "13562891"
+	},
+	"item": [
+		{
+			"name": "auth/access",
+			"request": {
+				"auth": {
+					"type": "apikey",
+					"apikey": [
+						{
+							"key": "value",
+							"value": "Key-XSIS-or0vGMAAfSbdExBiVrZN",
+							"type": "string"
+						},
+						{
+							"key": "key",
+							"value": "X-XSIS-Key",
+							"type": "string"
+						},
+						{
+							"key": "in",
+							"value": "header",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:5209/auth/access",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5209",
+					"path": [
+						"auth",
+						"access"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "List of Movies",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJodHRwOi8vd3d3LnczLm9yZy8yMDAxLzA0L3htbGRzaWctbW9yZSNobWFjLXNoYTI1NiIsInR5cCI6IkpXVCJ9.eyJodHRwOi8vc2NoZW1hcy54bWxzb2FwLm9yZy93cy8yMDA1LzA1L2lkZW50aXR5L2NsYWltcy9uYW1lIjoiYWNjZXNzIiwianRpIjoiYmFjNzkyY2YtODc5ZC00OWI2LWI4YjAtMTlkZWY3N2FjNjRiIiwiZXhwIjoxNjk1MzM3MTU0LCJpc3MiOiJhY2Nlc3NJc3N1ZXIiLCJhdWQiOiJhY2Nlc3NBdWRpZW5jZSJ9.qxLNgQW4B5I0m48tZuJX0GSp7JSuuAvDVxLvV9W3QKU",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:5209/movies",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5209",
+					"path": [
+						"movies"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Detail of Movie",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJodHRwOi8vd3d3LnczLm9yZy8yMDAxLzA0L3htbGRzaWctbW9yZSNobWFjLXNoYTI1NiIsInR5cCI6IkpXVCJ9.eyJodHRwOi8vc2NoZW1hcy54bWxzb2FwLm9yZy93cy8yMDA1LzA1L2lkZW50aXR5L2NsYWltcy9uYW1lIjoiYWNjZXNzIiwianRpIjoiM2U1YzE3ZmEtOTRiNy00MjJhLTk0MDEtY2Q5YmEyNzViMWE5IiwiZXhwIjoxNjk1MzM2NDA3LCJpc3MiOiJhY2Nlc3NJc3N1ZXIiLCJhdWQiOiJhY2Nlc3NBdWRpZW5jZSJ9.k3Ts5zjlyCCYPFyaAteLluQHNgPWne6buDCg7-Qne1U",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": []
+				},
+				"url": {
+					"raw": "http://localhost:5209/movies/1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5209",
+					"path": [
+						"movies",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Insert Movie",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJodHRwOi8vd3d3LnczLm9yZy8yMDAxLzA0L3htbGRzaWctbW9yZSNobWFjLXNoYTI1NiIsInR5cCI6IkpXVCJ9.eyJodHRwOi8vc2NoZW1hcy54bWxzb2FwLm9yZy93cy8yMDA1LzA1L2lkZW50aXR5L2NsYWltcy9uYW1lIjoiYWNjZXNzIiwianRpIjoiMGY5NjgzYjgtYTdjNi00M2NjLTljNDEtNTI4MWYzYTI0MDY3IiwiZXhwIjoxNjk1MzU4MzAzLCJpc3MiOiJhY2Nlc3NJc3N1ZXIiLCJhdWQiOiJhY2Nlc3NBdWRpZW5jZSJ9.SxizZCVgAYoK0IHLq5iAGkJ34fEWvxfS0p_8XQhrnFg",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"title\": \"Quicke Express\",\r\n    \"description\": \"adalah sebuah film Humor Indonesia tahun 2011 \",\r\n    \"rating\": 8,\r\n    \"image\": \"\",\r\n    \"created_at\": \"2023-09-02T14:41:58.227\",\r\n    \"updated_at\": \"2023-09-02T14:41:58.227\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:5209/movies",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5209",
+					"path": [
+						"movies"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Update Movie",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJodHRwOi8vd3d3LnczLm9yZy8yMDAxLzA0L3htbGRzaWctbW9yZSNobWFjLXNoYTI1NiIsInR5cCI6IkpXVCJ9.eyJodHRwOi8vc2NoZW1hcy54bWxzb2FwLm9yZy93cy8yMDA1LzA1L2lkZW50aXR5L2NsYWltcy9uYW1lIjoiYWNjZXNzIiwianRpIjoiZGU2M2IzOTUtYzc2Ny00OTc3LTg0YzgtZDQzOWY5NWEwNWFlIiwiZXhwIjoxNjk1MzY3NjA1LCJpc3MiOiJhY2Nlc3NJc3N1ZXIiLCJhdWQiOiJhY2Nlc3NBdWRpZW5jZSJ9.JMRt-WavkdSmm0D_1zfwr2osJDZ2WQiztF4CeX1F9rw",
+							"type": "string"
+						}
+					]
+				},
+				"method": "PATCH",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "[\r\n  { \"op\": \"replace\", \"path\": \"/Title\", \"value\": \"Bangkit dari malam hari\" }\r\n]",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:5209/movies/:2",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5209",
+					"path": [
+						"movies",
+						":2"
+					],
+					"variable": [
+						{
+							"key": "2",
+							"value": ""
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Delete Movies",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:5209/movies/:2",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5209",
+					"path": [
+						"movies",
+						":2"
+					],
+					"variable": [
+						{
+							"key": "2",
+							"value": ""
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
