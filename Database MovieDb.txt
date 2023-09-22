@@ -1,0 +1,41 @@
+-- Database: MovieDb
+
+-- DROP DATABASE IF EXISTS "MovieDb";
+
+CREATE DATABASE "MovieDb"
+    WITH
+    OWNER = postgres
+    ENCODING = 'UTF8'
+    LC_COLLATE = 'Indonesian_Indonesia.1252'
+    LC_CTYPE = 'Indonesian_Indonesia.1252'
+    TABLESPACE = pg_default
+    CONNECTION LIMIT = -1
+    IS_TEMPLATE = False;
+
+
+-- Table: public.Movie
+
+-- DROP TABLE IF EXISTS public."Movie";
+
+CREATE TABLE IF NOT EXISTS public."Movie"
+(
+    "ID" integer NOT NULL DEFAULT nextval('"Movie_ID_seq"'::regclass),
+    "Title" character varying(500) COLLATE pg_catalog."default" NOT NULL,
+    "Description" character varying(9999) COLLATE pg_catalog."default" NOT NULL,
+    "Rating" numeric NOT NULL,
+    "Image" character varying(9999) COLLATE pg_catalog."default" NOT NULL,
+    "Created_at" date NOT NULL,
+    "Updated_at" date NOT NULL,
+    CONSTRAINT "Movie_pkey" PRIMARY KEY ("ID")
+)
+
+TABLESPACE pg_default;
+
+ALTER TABLE IF EXISTS public."Movie"
+    OWNER to postgres;
+
+
+---Insert Data
+INSERT INTO public."Movie"(
+	 "Title", "Description", "Rating", "Image", "Created_at", "Updated_at")
+	VALUES ( 'Suzzana', 'Film Horor di tahun 1993', 8.0, '', NOW(), NOW());
