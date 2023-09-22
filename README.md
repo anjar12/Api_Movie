@@ -41,7 +41,7 @@ When you run the application the database will be automatically created (if nece
 
 Pelase run query on , file :
 
-### TestBackendOnPostmane
+### TestBackendOnPostman
 
 Please import to yout postman application, we put the potman collection on Movie_Api.postman_collection.JSON
 
