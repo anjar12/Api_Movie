@@ -35,7 +35,7 @@ When you run the application the database will be automatically created (if nece
 
 Pelase run query on , file Database MovieDb.Txt :
 
-### TestBackendOnPostman
+### Test On Postman
 
 Please import to your postman application, we put the postman collection on Movie_Api.postman_collection.JSON
 
