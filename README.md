@@ -14,14 +14,8 @@
 
 ## Getting Started
 
-Install the [NuGet package](https://www.nuget.org/packages/Matech.Clean.Architecture.Template) and run `dotnet new cas`:
-
 1. Install the latest [.NET SDK](https://dotnet.microsoft.com/download)
-2. Run `dotnet new --install Matech.Clean.Architecture.Template` to install the project template
-3. Create a folder for your solution and cd into it (the template will use it as project name)
-4. Run `dotnet new cas` to create a new project
-5. Navigate to `src/Apps/CleanArchitecture.Api` and run `dotnet run` to launch the back end (ASP.NET Core Web API)
-6. Open web browser https://localhost:5021/api Swagger UI
+2. Create a folder for your solution (Your project name)
 
 
 ### Database Configuration
