@@ -37,7 +37,7 @@ Pelase run query on , file Database MovieDb.Txt :
 
 ### TestBackendOnPostman
 
-Please import to yout postman application, we put the potman collection on Movie_Api.postman_collection.JSON
+Please import to your postman application, we put the postman collection on Movie_Api.postman_collection.JSON
 
 ## Overview
 
